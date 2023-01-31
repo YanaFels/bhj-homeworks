@@ -18,3 +18,9 @@ function closePopup() {
 }
 
 close[1].onclick = close[0].onclick = closePopup;
+
+for (let i = 0; i < close.length; i++) {
+    close[i].onclick = function () {
+       close[i].closest('.modal').className = 'modal';
+    };
+}
