@@ -8,6 +8,5 @@ navigation.forEach((element, index) => {
         contents[lastIndex].classList.remove('tab__content_active');
         element.classList.add('tab_active');
         contents[index].classList.add('tab__content_active');
-        console.log(lastIndex);
     }
 });
