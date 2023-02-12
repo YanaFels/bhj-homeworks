@@ -1,3 +1,5 @@
+"use strict"
+
 const reveal = Array.from(document.querySelectorAll('.reveal'));
 
 function  showBlock(block) {
