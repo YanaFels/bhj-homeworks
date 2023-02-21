@@ -31,13 +31,14 @@ function answerRobot() {
 }
 
 function chatActive(e) {
-    if(e.key === "Enter" && input.value !== '') {
+    let value = input.value.trim();
+    if(e.key === "Enter" && value !== '') {
         let time = new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
         messages.innerHTML += `
             <div class="message_client">
                 <div class="message__time">${time}</div>
                 <div class="message__text">
-                    ${input.value}
+                    ${value}
                 </div>
             </div>`;
         input.value = '';
