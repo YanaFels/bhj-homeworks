@@ -3,12 +3,12 @@
 const items = document.getElementById('items');//блок со всеми курсами
 const img = document.getElementById('loader');//картинка загрузки
 
-let xhr = new XMLHttpRequest();
+const xhr = new XMLHttpRequest();
 xhr.open('GET', 'https://students.netoservices.ru/nestjs-backend/slow-get-courses');
 xhr.responseType = 'json';
 xhr.send();
 
-xhr.addEventListener('readystatechange', () => {
+xhr.addEventListener('load', () => {
     if(xhr.readyState === 4 && xhr.status === 200) {
         img.classList.remove('loader_active');
 

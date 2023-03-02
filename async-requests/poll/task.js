@@ -4,7 +4,7 @@ let xhr = new XMLHttpRequest();
 xhr.open('GET', 'https://students.netoservices.ru/nestjs-backend/poll');
 xhr.send();
 
-xhr.addEventListener('readystatechange', () => {
+xhr.addEventListener('load', () => {
     if(xhr.readyState === 4 && xhr.status === 200) {
         let data = JSON.parse(xhr.response);
         document.getElementById('poll__title').innerText = data.data.title;
